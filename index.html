@@ -1,136 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sambo Péptidos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sambo Péptidos</title>
 
-<style>
-body {
-  margin: 0;
-  background: #0b0b0b;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
 
-/* HEADER CON LOGO */
-.site-header {
-  background: #000;
-  padding: 32px 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /* HEADER CON LOGO */
+    .site-header {
+      background: #000;
+      padding: 32px 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.logo {
-  max-width: 160px;
-  height: auto;
-  display: block;
-}
+    .logo {
+      max-width: 160px;
+      height: auto;
+      display: block;
+    }
 
-/* HERO */
-.hero {
-  padding: 30px;
-  text-align: center;
-}
+    /* HERO */
+    .hero {
+      padding: 30px;
+      text-align: center;
+    }
 
-/* SECCIONES */
-.section-title {
-  padding: 10px 20px;
-  font-size: 20px;
-  color: #ccc;
-}
+    /* SECCIONES */
+    .section-title {
+      padding: 10px 20px;
+      font-size: 20px;
+      color: #ccc;
+    }
 
-/* PRODUCTOS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
+    /* PRODUCTOS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
 
-.card {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform .2s ease;
-}
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
 
-.card:hover {
-  transform: scale(1.03);
-}
+    .card:hover {
+      transform: scale(1.03);
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 16px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 16px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
-}
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
 
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,.5);
-}
-.whatsapp-float img {
-  width: 28px;
-}
-</style>
+    /* WHATSAPP FLOTANTE */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+      z-index: 9999;
+    }
+
+    .whatsapp-float img {
+      width: 28px;
+      height: 28px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <img src="Designer (6).png" alt="Sambo Péptidos" class="logo">
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <img src="Designer (6).png" alt="Sambo Péptidos" class="logo">
+  </header>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Optimiza tu físico</h1>
-  <p>Péptidos premium | Envíos a todo Ecuador</p>
-</div>
-
-<!-- GRASA -->
-<div class="section-title">🔥 Pérdida de grasa</div>
-<div class="products">
-  <div class="card">
-    <h3>Tirzepatide</h3>
-    <p>Reduce apetito y grasa corporal</p>
-    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide">Comprar</a>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Optimiza tu físico</h1>
+    <p>Péptidos premium | Envíos a todo Ecuador</p>
   </div>
-</div>
 
-<footer>
-Sambo Péptidos | Samborondón<br>
-<small>Productos de investigación. No son medicamentos.</small>
-</footer>
+  <!-- PÉRDIDA DE GRASA -->
+  <div class="section-title">🔥 Pérdida de grasa</div>
+  <div class="products">
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/593989949501" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+    <div class="card">
+      <h3>Tirzepatide</h3>
+      <p>Reduce apetito y grasa corporal</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide" class="btn">Comprar</a>
+    </div>
+
+    <div class="card">
+      <h3>Retatrutide</h3>
+      <p>Pérdida de peso avanzada</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide" class="btn">Comprar</a>
+    </div>
+
+    <div class="card">
+      <h3>Semaglutide</h3>
+      <p>Control de hambre y saciedad</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide" class="btn">Comprar</a>
+    </div>
+
+  </div>
+
+  <!-- ESTÉTICA -->
+  <div class="section-title">💎 Estética y piel</div>
+  <div class="products">
+
+    <div class="card">
+      <h3>GHK-CU</h3>
+      <p>Piel y cabello</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20GHK-CU" class="btn">Comprar</a>
+    </div>
+
+    <div class="card">
+      <h3>BPC-157</h3>
+      <p>Recuperación celular</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20BPC-157" class="btn">Comprar</a>
+    </div>
+
+  </div>
+
+  <!-- RECUPERACIÓN -->
+  <div class="section-title">💪 Recuperación</div>
+  <div class="products">
+
+    <div class="card">
+      <h3>TB-500</h3>
+      <p>Recuperación muscular acelerada</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20TB-500" class="btn">Comprar</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Sambo Péptidos | Samborondón<br>
+    <small>Productos de investigación. No son medicamentos.</small>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/593989949501" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 
 </body>
 </html>
