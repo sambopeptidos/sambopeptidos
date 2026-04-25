@@ -6,62 +6,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sambo Péptidos</title>
 
+<!-- Fuente moderna -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
   background: #0b0b0b;
-  color: #fff;
+  color: #ffffff;
   font-family: 'Inter', Arial, sans-serif;
 }
 
-/* HEADER */
+/* LOGO */
 .site-header {
   background: #000;
-  padding: 48px 0 32px;
-  display: flex;
-  justify-content: center;
+  padding: 40px 0 28px;
+  text-align: center;
 }
-
-.logo {
+.site-header img {
   max-width: 220px;
 }
 
-/* NAV */
+/* NAVBAR */
 .main-nav {
   display: flex;
-  gap: 14px;
   justify-content: center;
-  padding: 14px;
+  gap: 14px;
+  padding: 16px;
   background: linear-gradient(180deg, #0c2338, #081728);
 }
 
 .main-nav button {
-  background: none;
   border: none;
+  background: transparent;
   color: #cfd9e0;
   padding: 10px 20px;
   border-radius: 14px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.2s ease;
-}
-
-.main-nav button:hover {
-  background: rgba(255,255,255,0.08);
 }
 
 .main-nav button.active {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
   font-weight: 600;
 }
 
-/* SECTIONS */
+.main-nav button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* CONTENIDO */
+.content {
+  padding: 60px 20px;
+}
+
 .section {
   display: none;
-  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .section.active {
@@ -72,10 +75,9 @@ body {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  gap: 30px;
 }
 
-/* CARD */
 .card {
   background: #1a1a1a;
   padding: 30px;
@@ -88,16 +90,16 @@ body {
 }
 
 .card p {
-  color: #ccc;
   font-size: 14px;
+  color: #ccc;
 }
 
 .btn {
   display: inline-block;
   margin-top: 18px;
-  padding: 12px 24px;
+  padding: 12px 22px;
   background: #25D366;
-  color: #fff;
+  color: white;
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
@@ -107,7 +109,7 @@ body {
 footer {
   text-align: center;
   padding: 40px 20px;
-  color: #888;
+  color: #777;
 }
 
 /* WHATSAPP */
@@ -115,17 +117,16 @@ footer {
   position: fixed;
   bottom: 22px;
   right: 22px;
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .whatsapp-float img {
-  width: 30px;
+  width: 28px;
 }
 </style>
 </head>
@@ -133,16 +134,18 @@ footer {
 <body>
 
 <header class="site-header">
-  <img src="Designer (6).png" class="logo">
+  <img src="Designer (6).png" alt="Sambo Péptidos">
 </header>
 
 <nav class="main-nav">
-  <button onclick="showSection('catalogo')" class="active">Catálogo</button>
-  <button onclick="showSection('protocolos')">Protocolos</button>
-  <button onclick="showSection('reconstitucion')">Reconstitución</button>
-  <button onclick="showSection('envios')">Envíos & Pagos</button>
-  <button onclick="showSection('contacto')">Contáctanos</button>
+  <button class="active" onclick="showSection('catalogo', this)">Catálogo</button>
+  <button onclick="showSection('protocolos', this)">Protocolos</button>
+  <button onclick="showSection('reconstitucion', this)">Reconstitución</button>
+  <button onclick="showSection('envios', this)">Envíos & Pagos</button>
+  <button onclick="showSection('contacto', this)">Contáctanos</button>
 </nav>
+
+<div class="content">
 
 <!-- CATÁLOGO -->
 <div id="catalogo" class="section active">
@@ -169,7 +172,7 @@ footer {
 <div id="protocolos" class="section">
   <div class="card">
     <h3>Protocolos personalizados</h3>
-    <p>Asesoría según objetivos, experiencia y contexto.</p>
+    <p>Asesoría basada en objetivos específicos y experiencia.</p>
     <a class="btn" href="https://wa.me/593989949501">Consultar</a>
   </div>
 </div>
@@ -177,9 +180,9 @@ footer {
 <!-- RECONSTITUCIÓN -->
 <div id="reconstitucion" class="section">
   <div class="card">
-    <h3>Guías educativas</h3>
-    <p>Información responsable sobre preparación y manejo.</p>
-    <a class="btn" href="https://wa.me/593989949501">Solicitar info</a>
+    <h3>Guías de reconstitución</h3>
+    <p>Información educativa responsable sobre preparación.</p>
+    <a class="btn" href="https://wa.me/593989949501">Solicitar guía</a>
   </div>
 </div>
 
@@ -187,8 +190,8 @@ footer {
 <div id="envios" class="section">
   <div class="card">
     <h3>Envíos & Pagos</h3>
-    <p>Envíos a todo Ecuador. Información clara al confirmar pedido.</p>
-    <a class="btn" href="https://wa.me/593989949501">Ver detalles</a>
+    <p>Envíos a todo Ecuador. Transferencias bancarias.</p>
+    <p>Entrega 24–48h hábiles. Embalaje discreto.</p>
   </div>
 </div>
 
@@ -201,6 +204,8 @@ footer {
   </div>
 </div>
 
+</div>
+
 <footer>
   Sambo Péptidos · Samborondón<br>
   Productos de investigación. No son medicamentos.
@@ -211,12 +216,12 @@ footer {
 </a>
 
 <script>
-function showSection(id) {
+function showSection(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
   document.querySelectorAll('.main-nav button').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+  btn.classList.add('active');
 }
 </script>
 
