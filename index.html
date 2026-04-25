@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,10 +25,6 @@ header {
 .hero {
   padding: 30px;
   text-align: center;
-}
-
-.hero h1 {
-  margin: 0;
 }
 
 .section-title {
@@ -58,17 +55,47 @@ header {
 .btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 10px;
+  padding: 10px 16px;
   background: #25D366;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   color: #777;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+  z-index: 9999;
+  animation: flotar 2.5s ease-in-out infinite;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Animación */
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 </style>
 </head>
@@ -78,106 +105,70 @@ footer {
 <header>Sambo Peptidos</header>
 
 <div class="hero">
-<h1>Optimiza tu físico</h1>
-<p>Péptidos premium | Envíos a todo Ecuador</p>
+  <h1>Optimiza tu físico</h1>
+  <p>Péptidos premium | Envíos a todo Ecuador</p>
 </div>
 
-<!-- GRASA -->
 <div class="section-title">🔥 Pérdida de grasa</div>
 <div class="products">
 
-<div class="card">
-<h3>Tirzepatide</h3>
-<p>Reduce apetito y grasa corporal</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide">Comprar</a>
+  <div class="card">
+    <h3>Tirzepatide</h3>
+    <p>Reduce apetito y grasa corporal</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide">Comprar</a>
+  </div>
+
+  <div class="card">
+    <h3>Retatrutide</h3>
+    <p>Pérdida de peso avanzada</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide">Comprar</a>
+  </div>
+
+  <div class="card">
+    <h3>Semaglutide</h3>
+    <p>Control de hambre y saciedad</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide">Comprar</a>
+  </div>
+
 </div>
 
-<div class="card">
-<h3>Retatrutide</h3>
-<p>Avanzado para pérdida de peso</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide">Comprar</a>
-</div>
-
-<div class="card">
-<h3>Semaglutide</h3>
-<p>Control de hambre y saciedad</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide">Comprar</a>
-</div>
-
-</div>
-
-<!-- ESTETICA -->
 <div class="section-title">💎 Estética y piel</div>
 <div class="products">
 
-<div class="card">
-<h3>GHK-CU</h3>
-<p>Regeneración de piel y cabello</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20GHK-CU">Comprar</a>
+  <div class="card">
+    <h3>GHK-CU</h3>
+    <p>Piel y cabello</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20GHK-CU">Comprar</a>
+  </div>
+
+  <div class="card">
+    <h3>BPC-157</h3>
+    <p>Recuperación celular</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20BPC-157">Comprar</a>
+  </div>
+
 </div>
 
-<div class="card">
-<h3>BPC-157</h3>
-<p>Recuperación y reparación celular</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20BPC-157">Comprar</a>
-</div>
-
-</div>
-
-<!-- RECUPERACION -->
 <div class="section-title">💪 Recuperación</div>
 <div class="products">
 
-<div class="card">
-<h3>TB-500</h3>
-<p>Recuperación muscular acelerada</p>
-<a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20TB-500">Comprar</a>
-</div>
+  <div class="card">
+    <h3>TB-500</h3>
+    <p>Recuperación muscular acelerada</p>
+    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20TB-500">Comprar</a>
+  </div>
 
 </div>
 
 <footer>
-Sambo Peptidos | Samborondón
+Sambo Peptidos | Samborondón<br>
+<small>Productos de investigación. No son medicamentos.</small>
 </footer>
 
+<!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/593989949501" class="whatsapp-float" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
-
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  font-size: 26px;
-  padding: 14px 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-  z-index: 9999;
-}
-
-/* Animación de flotación */
-.whatsapp-float {
-  animation: flotar 2.5s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
-
-</style>
-``
-  
 </body>
 </html>
