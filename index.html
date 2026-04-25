@@ -6,19 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sambo Péptidos</title>
 
-<!-- Fuente premium -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
   background: #0b0b0b;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.6;
 }
 
-/* HEADER LOGO */
+/* HEADER */
 .site-header {
   background: #000;
   padding: 48px 0 32px;
@@ -28,60 +26,46 @@ body {
 
 .logo {
   max-width: 220px;
-  height: auto;
 }
 
-/* NAVBAR (ORIGINAL, NO COPY) */
+/* NAV */
 .main-nav {
   display: flex;
-  justify-content: center;
   gap: 14px;
-  padding: 14px 16px;
+  justify-content: center;
+  padding: 14px;
   background: linear-gradient(180deg, #0c2338, #081728);
 }
 
-.main-nav a {
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 14px;
+.main-nav button {
+  background: none;
+  border: none;
   color: #cfd9e0;
+  padding: 10px 20px;
   border-radius: 14px;
-  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
 }
 
-.main-nav a:hover {
+.main-nav button:hover {
   background: rgba(255,255,255,0.08);
 }
 
-.main-nav a.active {
-  background: #ffffff;
-  color: #000000;
+.main-nav button.active {
+  background: #fff;
+  color: #000;
   font-weight: 600;
 }
 
-/* HERO */
-.hero {
-  padding: 72px 20px 64px;
-  text-align: center;
-  background: linear-gradient(to bottom, #0b0b0b, #090909);
+/* SECTIONS */
+.section {
+  display: none;
+  padding: 60px 20px;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #cfcfcf;
-}
-
-/* SECCIONES */
-.section-title {
-  padding: 48px 20px 16px;
-  font-size: 20px;
-  color: #cccccc;
+.section.active {
+  display: block;
 }
 
 /* GRID */
@@ -89,52 +73,41 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 32px;
-  padding: 20px;
 }
 
 /* CARD */
 .card {
   background: #1a1a1a;
-  padding: 36px 28px;
-  border-radius: 18px;
+  padding: 30px;
+  border-radius: 16px;
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.6);
 }
 
 .card h3 {
-  margin-bottom: 12px;
-  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .card p {
+  color: #ccc;
   font-size: 14px;
-  color: #cfcfcf;
 }
 
-/* BOTÓN */
 .btn {
   display: inline-block;
-  margin-top: 22px;
-  padding: 12px 26px;
+  margin-top: 18px;
+  padding: 12px 24px;
   background: #25D366;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 14px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 48px 20px;
-  font-size: 14px;
-  color: #888888;
+  padding: 40px 20px;
+  color: #888;
 }
 
 /* WHATSAPP */
@@ -149,8 +122,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
-  z-index: 9999;
 }
 
 .whatsapp-float img {
@@ -161,60 +132,93 @@ footer {
 
 <body>
 
-<!-- LOGO -->
 <header class="site-header">
-  <img src="Designer (6).png" alt="Sambo Péptidos" class="logo">
+  <img src="Designer (6).png" class="logo">
 </header>
 
-<!-- NAV -->
 <nav class="main-nav">
-  <a href="#catalogo" class="active">Catálogo</a>
-  <a href="#protocolos">Protocolos</a>
-  <a href="#reconstitucion">Reconstitución</a>
-  <a href="#envios">Envíos & Pagos</a>
-  <a href="#contacto">Contáctanos</a>
+  <button onclick="showSection('catalogo')" class="active">Catálogo</button>
+  <button onclick="showSection('protocolos')">Protocolos</button>
+  <button onclick="showSection('reconstitucion')">Reconstitución</button>
+  <button onclick="showSection('envios')">Envíos & Pagos</button>
+  <button onclick="showSection('contacto')">Contáctanos</button>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Optimiza tu físico</h1>
-  <p>Péptidos premium · Investigación avanzada · Envíos a todo Ecuador</p>
-</section>
-
 <!-- CATÁLOGO -->
-<div class="section-title" id="catalogo">🔥 Optimización metabólica</div>
-<div class="products">
-
-  <div class="card">
-    <h3>Tirzepatide</h3>
-    <p>Apoyo a la regulación del apetito y composición corporal</p>
-    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide" target="_blank">Comprar</a>
+<div id="catalogo" class="section active">
+  <div class="products">
+    <div class="card">
+      <h3>Tirzepatide</h3>
+      <p>Optimización del apetito y composición corporal</p>
+      <a class="btn" href="https://wa.me/593989949501">Comprar</a>
+    </div>
+    <div class="card">
+      <h3>Retatrutide</h3>
+      <p>Soporte avanzado para control del peso</p>
+      <a class="btn" href="https://wa.me/593989949501">Comprar</a>
+    </div>
+    <div class="card">
+      <h3>Semaglutide</h3>
+      <p>Regulación del hambre y saciedad</p>
+      <a class="btn" href="https://wa.me/593989949501">Comprar</a>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Retatrutide</h3>
-    <p>Soporte avanzado para control del peso</p>
-    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide" target="_blank">Comprar</a>
-  </div>
-
-  <div class="card">
-    <h3>Semaglutide</h3>
-    <p>Regulación del hambre y la saciedad</p>
-    <a class="btn" href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide" target="_blank">Comprar</a>
-  </div>
-
 </div>
 
-<!-- FOOTER -->
-<footer id="contacto">
+<!-- PROTOCOLOS -->
+<div id="protocolos" class="section">
+  <div class="card">
+    <h3>Protocolos personalizados</h3>
+    <p>Asesoría según objetivos, experiencia y contexto.</p>
+    <a class="btn" href="https://wa.me/593989949501">Consultar</a>
+  </div>
+</div>
+
+<!-- RECONSTITUCIÓN -->
+<div id="reconstitucion" class="section">
+  <div class="card">
+    <h3>Guías educativas</h3>
+    <p>Información responsable sobre preparación y manejo.</p>
+    <a class="btn" href="https://wa.me/593989949501">Solicitar info</a>
+  </div>
+</div>
+
+<!-- ENVIOS -->
+<div id="envios" class="section">
+  <div class="card">
+    <h3>Envíos & Pagos</h3>
+    <p>Envíos a todo Ecuador. Información clara al confirmar pedido.</p>
+    <a class="btn" href="https://wa.me/593989949501">Ver detalles</a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div id="contacto" class="section">
+  <div class="card">
+    <h3>Contacto directo</h3>
+    <p>Atención personalizada vía WhatsApp.</p>
+    <a class="btn" href="https://wa.me/593989949501">Hablar ahora</a>
+  </div>
+</div>
+
+<footer>
   Sambo Péptidos · Samborondón<br>
   Productos de investigación. No son medicamentos.
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/593989949501" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/593989949501" class="whatsapp-float">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.main-nav button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
 
 </body>
 </html>
