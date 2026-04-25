@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,27 +7,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sambo Péptidos</title>
 
-https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap
+<!-- Fuente correcta -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 
 <style>
 body {
   margin: 0;
   background: #0b0b0b;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
-/* LOGO */
+/* HEADER */
 .site-header {
   background: #000;
-  padding: 36px 0 24px;
+  padding: 40px 0 24px;
   text-align: center;
 }
 .site-header img {
   max-width: 220px;
 }
 
-/* NAVBAR */
+/* NAV */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -34,9 +36,8 @@ body {
   padding: 14px;
   background: linear-gradient(180deg, #0c2338, #081728);
 }
-
 .main-nav button {
-  background: transparent;
+  background: none;
   border: none;
   color: #cfd9e0;
   padding: 10px 20px;
@@ -44,32 +45,24 @@ body {
   cursor: pointer;
   font-size: 14px;
 }
-
 .main-nav button.active {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   font-weight: 600;
 }
-
 .main-nav button:hover {
   background: rgba(255,255,255,0.1);
 }
 
-/* CONTENIDO */
+/* PAGES */
 .page {
   display: none;
-  padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
+  padding: 60px 20px;
 }
-
 .page.active {
   display: block;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
 }
 
 /* GRID */
@@ -78,22 +71,19 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
 }
-
 .card {
   background: #1a1a1a;
   padding: 30px;
   border-radius: 16px;
   text-align: center;
 }
-
 .card p {
   color: #ccc;
   font-size: 14px;
 }
-
 .btn {
-  margin-top: 18px;
   display: inline-block;
+  margin-top: 18px;
   background: #25D366;
   color: #fff;
   padding: 12px 24px;
@@ -109,7 +99,7 @@ footer {
   color: #777;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -131,37 +121,37 @@ footer {
 <body>
 
 <header class="site-header">
-  Designer (6).png
+  <img src="Designer (6).png" alt="Sambo Péptidos">
 </header>
 
 <nav class="main-nav">
-  <button class="active" onclick="openPage('catalogo', this)">Catálogo</button>
-  <button onclick="openPage('protocolos', this)">Protocolos</button>
-  <button onclick="openPage('reconstitucion', this)">Reconstitución</button>
-  <button onclick="openPage('envios', this)">Envíos & Pagos</button>
-  <button onclick="openPage('contacto', this)">Contáctanos</button>
+  <button class="active" onclick="openPage('catalogo',this)">Catálogo</button>
+  <button onclick="openPage('protocolos',this)">Protocolos</button>
+  <button onclick="openPage('reconstitucion',this)">Reconstitución</button>
+  <button onclick="openPage('envios',this)">Envíos & Pagos</button>
+  <button onclick="openPage('contacto',this)">Contáctanos</button>
 </nav>
 
 <!-- CATÁLOGO -->
 <section id="catalogo" class="page active">
-  <h1>Catálogo</h1>
+  <h1 style="text-align:center">Catálogo</h1>
   <div class="grid">
     <div class="card">
       <h3>Tirzepatide</h3>
       <p>Optimización del apetito</p>
-      https://wa.me/593989949501
+      <a class="btn" href="https://wa.me/593989949501" target="_blank">Consultar</a>
     </div>
     <div class="card">
       <h3>Retatrutide</h3>
       <p>Control del peso</p>
-      https://wa.me/593989949501
+      <a class="btn" href="https://wa.me/593989949501" target="_blank">Consultar</a>
     </div>
   </div>
 </section>
 
 <!-- PROTOCOLOS -->
 <section id="protocolos" class="page">
-  <h1>Protocolos</h1>
+  <h1 style="text-align:center">Protocolos</h1>
   <div class="card">
     <p>Planes personalizados según objetivos.</p>
   </div>
@@ -169,7 +159,7 @@ footer {
 
 <!-- RECONSTITUCIÓN -->
 <section id="reconstitucion" class="page">
-  <h1>Reconstitución</h1>
+  <h1 style="text-align:center">Reconstitución</h1>
   <div class="card">
     <p>Guías educativas responsables.</p>
   </div>
@@ -177,19 +167,20 @@ footer {
 
 <!-- ENVIOS -->
 <section id="envios" class="page">
-  <h1>Envíos & Pagos</h1>
+  <h1 style="text-align:center">Envíos & Pagos</h1>
   <div class="grid">
-    <div class="card"><p>Pagos por transferencia</p></div>
-    <div class="card"><p>Embalaje discreto</p></div>
-    <div class="card"><p>Entrega 24–48h</p></div>
+    <div class="card">Pagos por transferencia</div>
+    <div class="card">Embalaje discreto</div>
+    <div class="card">Entrega 24–48h</div>
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="page">
-  <h1>Contáctanos</h1>
+  <h1 style="text-align:center">Contáctanos</h1>
   <div class="card">
     <p>Atención directa vía WhatsApp</p>
+    <a class="btn" href="https://wa.me/593989949501" target="_blank">Escribir</a>
   </div>
 </section>
 
@@ -198,8 +189,8 @@ footer {
   Productos de investigación. No son medicamentos.
 </footer>
 
-https://wa.me/593989949501
-  https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
+<a class="whatsapp-float" href="https://wa.me/593989949501" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 <script>
