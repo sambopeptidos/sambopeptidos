@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sambo Peptidos</title>
+<title>Sambo Péptidos</title>
 
 <style>
 body {
@@ -14,25 +14,36 @@ body {
   color: white;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+/* HEADER CON LOGO */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
   background: #000;
 }
 
+.logo {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HERO */
 .hero {
   padding: 30px;
   text-align: center;
 }
 
+/* SECCIONES */
 .section-title {
   padding: 10px 20px;
   font-size: 20px;
   color: #ccc;
 }
 
+/* PRODUCTOS */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -63,6 +74,7 @@ header {
   font-weight: bold;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -102,17 +114,18 @@ footer {
 
 <body>
 
-
+<!-- HEADER LOGO -->
 <header class="site-header">
   <img src="Designer (4).png" alt="Sambo Péptidos" class="logo">
 </header>
 
-
+<!-- HERO -->
 <div class="hero">
   <h1>Optimiza tu físico</h1>
   <p>Péptidos premium | Envíos a todo Ecuador</p>
 </div>
 
+<!-- GRASA -->
 <div class="section-title">🔥 Pérdida de grasa</div>
 <div class="products">
 
@@ -136,6 +149,7 @@ footer {
 
 </div>
 
+<!-- ESTÉTICA -->
 <div class="section-title">💎 Estética y piel</div>
 <div class="products">
 
@@ -153,6 +167,7 @@ footer {
 
 </div>
 
+<!-- RECUPERACIÓN -->
 <div class="section-title">💪 Recuperación</div>
 <div class="products">
 
@@ -165,11 +180,11 @@ footer {
 </div>
 
 <footer>
-Sambo Peptidos | Samborondón<br>
+Sambo Péptidos | Samborondón<br>
 <small>Productos de investigación. No son medicamentos.</small>
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/593989949501" class="whatsapp-float" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
