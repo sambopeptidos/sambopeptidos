@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,7 +122,13 @@ footer {
   color:#777;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP FLOAT + ANIMACIÓN */
+@keyframes floatWhats {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -135,7 +142,9 @@ footer {
   justify-content: center;
   box-shadow: 0 6px 14px rgba(0,0,0,.5);
   z-index: 9999;
+  animation: floatWhats 2.5s ease-in-out infinite;
 }
+
 .whatsapp-float img {
   width: 28px;
   height: 28px;
@@ -253,7 +262,7 @@ footer {
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/593989949501" target="_blank" class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 <script>
@@ -267,4 +276,3 @@ function openPage(id, btn) {
 
 </body>
 </html>
-``
