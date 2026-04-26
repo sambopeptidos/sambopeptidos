@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -122,17 +121,17 @@ footer {
   color:#777;
 }
 
-/* WHATSAPP FLOAT + ANIMACIÓN */
-@keyframes floatWhats {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+/* ===== WHATSAPP FLOAT + ANIMACIÓN ===== */
+@keyframes whatsappFloat {
+  0%   { bottom: 20px; }
+  50%  { bottom: 36px; }
+  100% { bottom: 20px; }
 }
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
   width: 56px;
   height: 56px;
   background: #25D366;
@@ -142,7 +141,7 @@ footer {
   justify-content: center;
   box-shadow: 0 6px 14px rgba(0,0,0,.5);
   z-index: 9999;
-  animation: floatWhats 2.5s ease-in-out infinite;
+  animation: whatsappFloat 2.2s ease-in-out infinite;
 }
 
 .whatsapp-float img {
@@ -224,7 +223,7 @@ footer {
 
       <div class="product">
         <h3>CJC‑1295 / Ipamorelin – 5 mg</h3>
-        <img src="CJC.png" alt="CJC 1295 Ipamorelin">
+        <img src="CJC.png" alt="CJC Ipamorelin">
         <p>Producción natural de GH.</p>
         <div class="price">$110</div>
         <a href="https://wa.me/593989949501" target="_blank">Consultar</a>
@@ -262,7 +261,7 @@ footer {
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/593989949501" target="_blank" class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <script>
