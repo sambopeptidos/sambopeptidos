@@ -1,121 +1,146 @@
-
 <!DOCTYPE html>
-<html-serif;<html lang="es">
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sambo Péptidos</title>
+
+https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap
+
+<style>
+body {
+  margin: 0;
+  background:#0b0b0b;
+  color:#ffffff;
+  font-family:'Inter',sans-serif;
 }
 
 /* HEADER */
 header {
-  background: #000;
-  padding: 40px 0 24px;
-  text-align: center;
+  background:#000;
+  padding:40px 0 28px;
+  text-align:center;
 }
-header img {
-  max-width: 220px;
-}
+header img {max-width:220px;}
 
 /* NAV */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  padding: 14px;
-  background: linear-gradient(180deg, #0c2338, #081728);
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  padding:14px;
+  background:linear-gradient(180deg,#0c2338,#081728);
 }
 nav button {
-  background: none;
-  border: none;
-  color: #cfd9e0;
-  padding: 10px 20px;
-  border-radius: 14px;
-  cursor: pointer;
-  font-size: 14px;
+  background:none;
+  border:none;
+  color:#cfd9e0;
+  padding:10px 20px;
+  border-radius:14px;
+  cursor:pointer;
+  font-size:14px;
 }
 nav button.active {
-  background: #ffffff;
-  color: #000000;
-  font-weight: 600;
-}
-nav button:hover {
-  background: rgba(255,255,255,0.1);
+  background:#fff;
+  color:#000;
+  font-weight:600;
 }
 
 /* PAGE SYSTEM */
 .page {
-  display: none;
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
+  display:none;
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
 }
-.page.active {
-  display: block;
+.page.active {display:block;}
+
+/* CATALOGO LAYOUT */
+.catalog-wrapper {
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:40px;
+}
+.catalog-info {
+  background:#f4f6f8;
+  color:#0b0b0b;
+  padding:48px;
+  border-radius:20px;
+}
+.catalog-info h1 {
+  font-size:38px;
+  margin:20px 0;
+}
+.catalog-info p {color:#2d3c4f;}
+.catalog-info ul {
+  list-style:none;
+  padding:0;
+  margin-top:24px;
+}
+.catalog-info li {margin-bottom:8px;}
+
+.catalog-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
+/* PRODUCT CARD */
+.product {
+  background:#1a1a1a;
+  padding:28px;
+  border-radius:18px;
 }
-
-/* CARD */
-.card {
-  background: #1a1a1a;
-  padding: 26px;
-  border-radius: 18px;
+.product h3 {margin-bottom:6px;}
+.price {color:#25D366;font-weight:600;margin-bottom:12px;}
+.product img {
+  width:100%;
+  border-radius:14px;
+  margin-bottom:14px;
 }
-.card h3 {
-  margin-top: 0;
+.product p {
+  font-size:13px;
+  color:#cfcfcf;
 }
-.card p {
-  font-size: 13px;
-  color: #cfcfcf;
-}
-.card img {
-  width: 100%;
-  border-radius: 14px;
-  margin: 12px 0;
-}
-.card a {
-  display: inline-block;
-  margin-top: 12px;
-  background: #25D366;
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
+.product a {
+  display:inline-block;
+  margin-top:16px;
+  background:#25D366;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #777;
+  text-align:center;
+  padding:40px 20px;
+  color:#777;
 }
 
 /* WHATSAPP FLOAT */
 .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-.whatsapp img {
-  width: 28px;
-}
+.whatsapp img {width:28px;}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="Designer (6).png" alt="Sambo Péptidos">
+  Designer (6).png alt="Sambo Péptidos">
 </header>
 
 <nav>
@@ -128,86 +153,83 @@ footer {
 
 <!-- CATÁLOGO -->
 <section id="catalogo" class="page active">
-  <div class="grid">
+  <div class="catalog-wrapper">
 
-    <div class="card">
-      <h3>Tirzepatide</h3>
-      <img src="images/tirzepatide.jpg" alt="Tirzepatide">
-      <p>Control del apetito y reducción de grasa.</p>
-      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide" target="_blank">
-        Consultar
-      </a>
+    <div class="catalog-info">
+      <small>CATÁLOGO DE OPTIMIZACIÓN</small>
+      <h1>Péptidos Sambo<br>Resultados Reales</h1>
+      <p>Formulaciones diseñadas con enfoque científico para optimización corporal y regenerativa.</p>
+      <ul>
+        <li>✔️ Pureza HPLC</li>
+        <li>✔️ Manejo estéril</li>
+        <li>✔️ Envíos discretos</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <h3>Retatrutide</h3>
-      <img src="images/retatrutide.jpg" alt="Retatrutide">
-      <p>Pérdida de grasa avanzada.</p>
-      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide" target="_blank">
-        Consultar
-      </a>
-    </div>
+    <div class="catalog-grid">
 
-    <div class="card">
-      <h3>Semaglutide</h3>
-      <img src="images/semaglutide.jpg" alt="Semaglutide">
-      <p>Regulación del hambre.</p>
-      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide" target="_blank">
-        Consultar
-      </a>
+      <div class="product">
+        <h3>Tirzepatide</h3>
+        <div class="price">$230</div>
+        images/tirzepatide.jpg
+        <p><strong>Componentes:</strong> GLP‑1 / GIP<br>
+        <strong>Beneficios:</strong> Control del apetito y reducción de grasa.</p>
+        https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide
+          Consultar Tirzepatide
+        </a>
+      </div>
+
+      <div class="product">
+        <h3>Retatrutide</h3>
+        <div class="price">$260</div>
+        images/retatrutide.jpg
+        <p><strong>Componentes:</strong> GLP‑1 / GIP / Glucagón<br>
+        <strong>Beneficios:</strong> Pérdida de grasa avanzada.</p>
+        https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide
+          Consultar Retatrutide
+        </a>
+      </div>
+
+      <div class="product">
+        <h3>Semaglutide</h3>
+        <div class="price">$210</div>
+        images/semaglutide.jpg
+        <p><strong>Componentes:</strong> GLP‑1<br>
+        <strong>Beneficios:</strong> Regulación del hambre.</p>
+        https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide
+          Consultar Semaglutide
+        </a>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<section id="protocolos" class="page">
-  <h1>Protocolos</h1>
-</section>
-
-<section id="reconstitucion" class="page">
-  <h1>Reconstitución</h1>
-</section>
-
-<section id="envios" class="page">
-  <h1>Envíos & Pagos</h1>
-</section>
-
-<section id="contacto" class="page">
-  <h1>Contáctanos</h1>
-</section>
+<!-- OTRAS SECCIONES -->
+<section id="protocolos" class="page"><h1>Protocolos</h1></section>
+<section id="reconstitucion" class="page"><h1>Reconstitución</h1></section>
+<section id="envios" class="page"><h1>Envíos & Pagos</h1></section>
+<section id="contacto" class="page"><h1>Contáctanos</h1></section>
 
 <footer>
   Sambo Péptidos · Samborondón<br>
   Productos de investigación. No son medicamentos.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/593989949501" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+https://wa.me/593989949501
+  https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
 </a>
 
 <script>
-function openPage(id, btn) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+function openPage(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
 }
 </script>
 
 </body>
 </html>
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sambo Péptidos</title>
-
-<!-- Google Font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-
-<style>
-body {
-  margin: 0;
-  background: #0b0b0b;
-  color: #ffffff;
