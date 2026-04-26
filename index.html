@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sambo Péptidos</title>
 
-<!-- Google Font CORRECTO -->
+<!-- Google Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 
 <style>
@@ -119,6 +120,26 @@ footer {
   padding:40px 20px;
   color:#777;
 }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,.5);
+  z-index: 9999;
+}
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
 </style>
 </head>
 
@@ -230,6 +251,11 @@ footer {
   Productos de investigación. No son medicamentos.
 </footer>
 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/593989949501" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 <script>
 function openPage(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -241,3 +267,4 @@ function openPage(id, btn) {
 
 </body>
 </html>
+``
