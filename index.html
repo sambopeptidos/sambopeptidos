@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sambo Péptidos</title>
 
-https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap
+<!-- Fuente correcta -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 
 <style>
 body {
@@ -22,7 +22,9 @@ header {
   padding:40px 0 28px;
   text-align:center;
 }
-header img {max-width:220px;}
+header img {
+  max-width:220px;
+}
 
 /* NAV */
 nav {
@@ -56,62 +58,40 @@ nav button.active {
 }
 .page.active {display:block;}
 
-/* CATALOGO LAYOUT */
-.catalog-wrapper {
-  display:grid;
-  grid-template-columns:1fr 1.3fr;
-  gap:40px;
-}
-.catalog-info {
-  background:#f4f6f8;
-  color:#0b0b0b;
-  padding:48px;
-  border-radius:20px;
-}
-.catalog-info h1 {
-  font-size:38px;
-  margin:20px 0;
-}
-.catalog-info p {color:#2d3c4f;}
-.catalog-info ul {
-  list-style:none;
-  padding:0;
-  margin-top:24px;
-}
-.catalog-info li {margin-bottom:8px;}
-
-.catalog-grid {
+/* GRID */
+.grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:26px;
 }
 
-/* PRODUCT CARD */
-.product {
+/* CARD */
+.card {
   background:#1a1a1a;
-  padding:28px;
+  padding:26px;
   border-radius:18px;
 }
-.product h3 {margin-bottom:6px;}
-.price {color:#25D366;font-weight:600;margin-bottom:12px;}
-.product img {
-  width:100%;
-  border-radius:14px;
-  margin-bottom:14px;
+.card h3 {
+  margin-top:0;
 }
-.product p {
+.card p {
   font-size:13px;
   color:#cfcfcf;
 }
-.product a {
+.card img {
+  width:100%;
+  border-radius:14px;
+  margin:12px 0;
+}
+.card a {
   display:inline-block;
-  margin-top:16px;
+  margin-top:12px;
   background:#25D366;
   color:#fff;
   padding:10px 22px;
   border-radius:10px;
-  text-decoration:none;
   font-weight:600;
+  text-decoration:none;
 }
 
 /* FOOTER */
@@ -141,7 +121,7 @@ footer {
 <body>
 
 <header>
-  Designer (6).png alt="Sambo Péptidos">
+  <img src="Designer (6).png" alt="Sambo Péptidos">
 </header>
 
 <nav>
@@ -154,60 +134,38 @@ footer {
 
 <!-- CATÁLOGO -->
 <section id="catalogo" class="page active">
-  <div class="catalog-wrapper">
+  <div class="grid">
 
-    <div class="catalog-info">
-      <small>CATÁLOGO DE OPTIMIZACIÓN</small>
-      <h1>Péptidos Sambo<br>Resultados Reales</h1>
-      <p>Formulaciones diseñadas con enfoque científico para optimización corporal y regenerativa.</p>
-      <ul>
-        <li>✔️ Pureza HPLC</li>
-        <li>✔️ Manejo estéril</li>
-        <li>✔️ Envíos discretos</li>
-      </ul>
+    <div class="card">
+      <h3>Tirzepatide</h3>
+      <img src="images/tirzepatide.jpg" alt="Tirzepatide">
+      <p>Control del apetito y reducción de grasa.</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide" target="_blank">
+        Consultar
+      </a>
     </div>
 
-    <div class="catalog-grid">
+    <div class="card">
+      <h3>Retatrutide</h3>
+      <img src="images/retatrutide.jpg" alt="Retatrutide">
+      <p>Pérdida de grasa avanzada.</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide" target="_blank">
+        Consultar
+      </a>
+    </div>
 
-      <div class="product">
-        <h3>Tirzepatide</h3>
-        <div class="price">$230</div>
-        images/tirzepatide.jpg
-        <p><strong>Componentes:</strong> GLP‑1 / GIP<br>
-        <strong>Beneficios:</strong> Control del apetito y reducción de grasa.</p>
-        https://wa.me/593989949501?text=Hola%20quiero%20Tirzepatide
-          Consultar Tirzepatide
-        </a>
-      </div>
-
-      <div class="product">
-        <h3>Retatrutide</h3>
-        <div class="price">$260</div>
-        images/retatrutide.jpg
-        <p><strong>Componentes:</strong> GLP‑1 / GIP / Glucagón<br>
-        <strong>Beneficios:</strong> Pérdida de grasa avanzada.</p>
-        https://wa.me/593989949501?text=Hola%20quiero%20Retatrutide
-          Consultar Retatrutide
-        </a>
-      </div>
-
-      <div class="product">
-        <h3>Semaglutide</h3>
-        <div class="price">$210</div>
-        images/semaglutide.jpg
-        <p><strong>Componentes:</strong> GLP‑1<br>
-        <strong>Beneficios:</strong> Regulación del hambre.</p>
-        https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide
-          Consultar Semaglutide
-        </a>
-      </div>
-
+    <div class="card">
+      <h3>Semaglutide</h3>
+      <img src="images/semaglutide.jpg" alt="Semaglutide">
+      <p>Regulación del hambre.</p>
+      <a href="https://wa.me/593989949501?text=Hola%20quiero%20Semaglutide" target="_blank">
+        Consultar
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- OTRAS SECCIONES -->
 <section id="protocolos" class="page"><h1>Protocolos</h1></section>
 <section id="reconstitucion" class="page"><h1>Reconstitución</h1></section>
 <section id="envios" class="page"><h1>Envíos & Pagos</h1></section>
@@ -218,8 +176,8 @@ footer {
   Productos de investigación. No son medicamentos.
 </footer>
 
-https://wa.me/593989949501
-  https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
+<a class="whatsapp" href="https://wa.me/593989949501" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 <script>
@@ -234,4 +192,3 @@ function openPage(id,btn){
 
 </body>
 </html>
-
